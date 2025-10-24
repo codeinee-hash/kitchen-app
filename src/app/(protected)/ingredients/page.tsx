@@ -1,5 +1,5 @@
-import IngredientForm from "@/components/forms/ingredient.form";
-import IngredientsTable from "@/components/tables/ingredients";
+import IngredientForm from "@/features/ingredients/view/ingredient.form";
+import {IngredientsTable} from "@/features/ingredients";
 
 export default function Ingredients() {
     return (

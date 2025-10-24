@@ -1,10 +1,10 @@
 "use client";
 
 import {useParams} from "next/navigation";
-import {useRecipe} from "@/store/recipe-store";
+import {useRecipe} from "@/entities/recipes";
 import {useEffect, useState} from "react";
-import {IRecipe} from "@/types/recipe";
-import RecipeForm from "@/components/forms/recipe.form";
+import {IRecipe} from "@/shared/lib/types";
+import RecipeForm from "@/features/recipes/view/recipe.form";
 
 
 export default function EditRecipePage() {

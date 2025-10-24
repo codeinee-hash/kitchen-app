@@ -1,4 +1,4 @@
-import PageContent from "@/components/ui-kit/page-content";
+import PageContent from "@/shared/ui/page-content";
 
 export default function About() {
     return (

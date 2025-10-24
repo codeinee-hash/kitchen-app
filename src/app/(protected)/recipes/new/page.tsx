@@ -1,6 +1,6 @@
 "use client";
 
-import RecipeForm from "@/components/forms/recipe.form";
+import RecipeForm from "@/features/recipes/view/recipe.form";
 
 export default function CreateRecipePage() {
     return (

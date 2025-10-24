@@ -1,10 +1,10 @@
 "use client";
 
-import {useRecipe} from "@/store/recipe-store";
+import {useRecipe} from "@/entities/recipes";
 import Link from "next/link";
 import {Button} from "@heroui/react";
-import RecipeCard from "@/components/layout/recipe-card";
-import {useAuth} from "@/store/auth-store";
+import RecipeCard from "@/features/recipes/view/recipe-card";
+import {useAuth} from "@/shared/auth/use-auth";
 
 export default function Home() {
     const {recipes, isLoading, error} = useRecipe();

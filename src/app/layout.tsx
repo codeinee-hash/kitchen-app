@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/header";
-import {Providers} from "@/providers/providers"
-import {siteConfig} from "@/config/site.config";
-import {layoutConfig} from "@/config/layout.config";
+import {Header} from "@/features/header";
+import {Providers} from "@/app/providers"
+import {config} from "@/shared/lib/config";
+import {layoutConfig} from "@/shared/lib/config";
 import { SessionProvider } from "next-auth/react";
-import {auth} from "@/auth/auth";
-import AppLoader from "@/hoc/app-loader";
-import PageTitle from "@/components/layout/page-title";
+import {auth} from "@/shared/auth/auth";
+import AppLoader from "@/app/app-loader";
+import PageTitle from "@/shared/ui/page-title";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: siteConfig.title,
-    description: siteConfig.description,
+    title: config.title,
+    description: config.description,
 };
 
 export default async function RootLayout({
@@ -49,7 +49,7 @@ export default async function RootLayout({
                           </main>
                       </div>
                       <footer className="flex items-center justify-center" style={{ height: layoutConfig.footerHeight }}>
-                          <p>{siteConfig.description}</p>
+                          <p>{config.description}</p>
                       </footer>
                   </div>
               </AppLoader>
